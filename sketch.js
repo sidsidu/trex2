@@ -98,7 +98,10 @@ function draw() {
   else if (gameState === END) {
     gameOver.visible = true;
     restart.visible = true;
-    
+     if (keyDown("space")){
+      reset();
+      trex.changeAnimation("running",trex_running);
+    }
     //set velcity of each game object to 0
     ground.velocityX = 0;
     trex.velocityY = 0;
